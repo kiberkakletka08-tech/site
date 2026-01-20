@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PC Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <div class="container">
+        <header>
+            <h1><span class="neon-text"></span> MONITOR</h1>
+            <div class="status-indicator">SYSTEM ONLINE</div>
+        </header>
+
+        <section class="stats-panel">
+            <div class="stat-card glass">
+                <h3>Всего устройств</h3>
+                <div class="stat-value" id="total-devices">0</div>
+            </div>
+            <div class="stat-card glass online">
+                <h3>Онлайн</h3>
+                <div class="stat-value neon-green" id="online-devices">0</div>
+            </div>
+            <div class="stat-card glass offline">
+                <h3>Оффлайн</h3>
+                <div class="stat-value neon-red" id="offline-devices">0</div>
+            </div>
+        </section>
+
+        <section class="device-list" id="device-list">
+            <!-- Cards will be injected here via JS -->
+            <div class="loading-spinner">Загрузка данных...</div>
+        </section>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
